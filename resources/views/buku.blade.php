@@ -11,6 +11,7 @@
                 <th>Penerbit</th>
                 <th>Tahun</th>
                 <th>Deskripsi</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,7 @@
                     <td>{{ $row->penerbit }}</td>
                     <td>{{ $row->tahun }}</td>
                     <td>{{ $row->deskripsi }}</td>
+                    <td><a href="/editBuku/{{ $row->id_buku }}">Edit</a></td>
                 </tr>
             @endforeach
         </tbody>

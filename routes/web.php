@@ -25,3 +25,5 @@ Route::get('/buku', [BukuController::class, 'buku']);
 Route::get('/tambahBuku', [BukuController::class, 'tambah']);
 Route::get('/kirim', [BukuController::class, 'kirim']);
 Route::post('/kirim', [BukuController::class, 'kirim']);
+Route::get('/editBuku/{id}', [BukuController::class, 'edit']);
+Route::post('/update', [BukuController::class, 'update']);

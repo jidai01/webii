@@ -2,6 +2,17 @@
 @section('content')
     <h1>{{ $content }}</h1>
     <div class="container">
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <h1>GET</h1>
         <form action="/kirim" method="get">
             <input type="text" class="form-control mb-4" name="judul" placeholder="Judul">
@@ -18,7 +29,7 @@
                 @endforeach
             </select>
             <input type="text" class="form-control mb-4" name="tahun" placeholder="Tahun Terbit">
-            <input type="text" class="form-control mb-4" name="deskripsi" placeholder="Deskripsi">
+            <textarea class="form-control mb-4" name="deskripsi" rows="5" cols="100" placeholder="Deskripsi"></textarea>
 
             <button type="submit">Tambah</button>
         </form>
@@ -41,7 +52,7 @@
                 @endforeach
             </select>
             <input type="text" class="form-control mb-4" name="tahun" placeholder="Tahun Terbit">
-            <input type="text" class="form-control mb-4" name="deskripsi" placeholder="Deskripsi">
+            <textarea class="form-control mb-4" name="deskripsi" rows="5" cols="100" placeholder="Deskripsi"></textarea>
 
             <button type="submit">Tambah</button>
         </form>

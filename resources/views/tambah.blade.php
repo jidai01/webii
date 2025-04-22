@@ -6,7 +6,7 @@
         <form action="/kirim" method="get">
             <input type="text" class="form-control mb-4" name="nama" placeholder="Nama Lengkap">
             <input type="text" class="form-control mb-4" name="nim" placeholder="NIM">
-            <input type="text" class="form-control mb-4" name="alamat" placeholder="Alamat">
+            <textarea class="form-control mb-4" name="alamat" rows="5" cols="100" placeholder="Alamat"></textarea>
 
             <button type="submit">Tambah</button>
         </form>
@@ -17,7 +17,7 @@
             @csrf
             <input type="text" class="form-control mb-4" name="nama" placeholder="Nama Lengkap">
             <input type="text" class="form-control mb-4" name="nim" placeholder="NIM">
-            <input type="text" class="form-control mb-4" name="alamat" placeholder="Alamat">
+            <textarea class="form-control mb-4" name="alamat" rows="5" cols="100" placeholder="Alamat"></textarea>
 
             <button type="submit">Tambah</button>
         </form>
