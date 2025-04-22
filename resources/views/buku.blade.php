@@ -1,0 +1,32 @@
+@extends('main')
+@section('content')
+    <h1>{{ $content }}</h1>
+    <h2>Daftar Buku</h2>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Judul</th>
+                <th>Pengarang</th>
+                <th>Penerbit</th>
+                <th>Tahun</th>
+                <th>Deskripsi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @php
+                $no = 1;
+            @endphp
+            @foreach ($buku as $row)
+                <tr>
+                    <td>{{ $no++ }}</td>
+                    <td>{{ $row->judul }}</td>
+                    <td>{{ $row->pengarang }}</td>
+                    <td>{{ $row->penerbit }}</td>
+                    <td>{{ $row->tahun }}</td>
+                    <td>{{ $row->deskripsi }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+@endsection

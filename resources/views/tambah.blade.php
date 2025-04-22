@@ -1,0 +1,25 @@
+@extends('main')
+@section('content')
+    <h1>{{ $content }}</h1>
+    <div class="container">
+        <h1>GET</h1>
+        <form action="/kirim" method="get">
+            <input type="text" class="form-control mb-4" name="nama" placeholder="Nama Lengkap">
+            <input type="text" class="form-control mb-4" name="nim" placeholder="NIM">
+            <input type="text" class="form-control mb-4" name="alamat" placeholder="Alamat">
+
+            <button type="submit">Tambah</button>
+        </form>
+
+        <br>
+        <h1>POST</h1>
+        <form action="/kirim" method="post">
+            @csrf
+            <input type="text" class="form-control mb-4" name="nama" placeholder="Nama Lengkap">
+            <input type="text" class="form-control mb-4" name="nim" placeholder="NIM">
+            <input type="text" class="form-control mb-4" name="alamat" placeholder="Alamat">
+
+            <button type="submit">Tambah</button>
+        </form>
+    </div>
+@endsection
