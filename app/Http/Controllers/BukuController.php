@@ -92,4 +92,10 @@ class BukuController extends Controller
 
         return view('editBuku', compact('title', 'content', 'buku', 'pengaranglist', 'penerbitlist'));
     }
+
+    public function delete($id): RedirectResponse
+    {
+        Buku::where('id_buku', $id)->delete();
+        return redirect('/buku');
+    }
 }

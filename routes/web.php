@@ -27,3 +27,4 @@ Route::get('/kirim', [BukuController::class, 'kirim']);
 Route::post('/kirim', [BukuController::class, 'kirim']);
 Route::get('/editBuku/{id}', [BukuController::class, 'edit']);
 Route::post('/update', [BukuController::class, 'update']);
+Route::get('/delete/{id}', [BukuController::class, 'delete']);

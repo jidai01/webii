@@ -26,7 +26,7 @@
                     <td>{{ $row->penerbit }}</td>
                     <td>{{ $row->tahun }}</td>
                     <td>{{ $row->deskripsi }}</td>
-                    <td><a href="/editBuku/{{ $row->id_buku }}">Edit</a></td>
+                    <td><a href="/editBuku/{{ $row->id_buku }}">Edit</a> | <a href="/delete/{{ $row->id_buku }}">Hapus</a></td>
                 </tr>
             @endforeach
         </tbody>
