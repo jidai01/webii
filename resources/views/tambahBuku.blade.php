@@ -14,7 +14,7 @@
         @endif
 
         <h1>POST</h1>
-        <form action="/kirim" method="post">
+        <form action="/kirimBuku" method="post">
             @csrf
             <input type="text" class="form-control mb-4" name="judul" placeholder="Judul">
             <select class="form-control mb-4" name="pengarang">

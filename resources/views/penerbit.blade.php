@@ -18,7 +18,7 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $row->nama_penerbit }}</td>
-                    <td><a href="/editPenerbit/{{ $row->id_penerbit }}">Edit</a> | <a href="/delete/{{ $row->id_penerbit }}">Hapus</a></td>
+                    <td><a href="/editPenerbit/{{ $row->id_penerbit }}">Edit</a> | <a href="/deletePenerbit/{{ $row->id_penerbit }}">Hapus</a></td>
                 </tr>
             @endforeach
         </tbody>

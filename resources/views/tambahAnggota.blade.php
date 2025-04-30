@@ -13,12 +13,14 @@
             </div>
         @endif
 
-        <form action="/updatePengarang" method="post">
+        <h1>POST</h1>
+        <form action="/kirimAnggota" method="post">
             @csrf
-            <input type="hidden" name="id_pengarang" value="{{ $pengarang->id_pengarang }}">
-            <input type="text" class="form-control mb-4" name="nama_pengarang" value="{{ $pengarang->nama_pengarang }}">
+            <input type="text" class="form-control mb-4" name="nim" placeholder="NIM">
+            <input type="text" class="form-control mb-4" name="nama" placeholder="Nama">
+            <textarea class="form-control mb-4" name="alamat" rows="5" cols="100" placeholder="Alamat"></textarea>
 
-            <button type="submit">Edit</button>
+            <button type="submit">Tambah</button>
         </form>
     </div>
 @endsection

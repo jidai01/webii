@@ -19,26 +19,29 @@ Route::get('/biodata', [BiodataController::class, 'biodata']);
 Route::get('/pinjam', [PinjamController::class, 'pinjam']);
 
 Route::get('/anggota', [AnggotaController::class, 'anggota']);
-Route::get('/tambah', [AnggotaController::class, 'tambah']);
-Route::post('/kirim', [AnggotaController::class, 'kirim']);
+Route::get('/tambahAnggota', [AnggotaController::class, 'tambah']);
+Route::post('/kirimAnggota', [AnggotaController::class, 'kirim']);
+Route::get('/editAnggota/{id}', [AnggotaController::class, 'edit']);
+Route::post('/updateAnggota', [AnggotaController::class, 'update']);
+Route::get('/deleteAnggota/{id}', [AnggotaController::class, 'delete']);
 
 Route::get('/buku', [BukuController::class, 'buku']);
 Route::get('/tambahBuku', [BukuController::class, 'tambah']);
-Route::post('/kirim', [BukuController::class, 'kirim']);
+Route::post('/kirimBuku', [BukuController::class, 'kirim']);
 Route::get('/editBuku/{id}', [BukuController::class, 'edit']);
-Route::post('/update', [BukuController::class, 'update']);
-Route::get('/delete/{id}', [BukuController::class, 'delete']);
+Route::post('/updateBuku', [BukuController::class, 'update']);
+Route::get('/deleteBuku/{id}', [BukuController::class, 'delete']);
 
 Route::get('/pengarang', [PengarangController::class, 'pengarang']);
 Route::get('/tambahPengarang', [PengarangController::class, 'tambah']);
 Route::post('/kirimPengarang', [PengarangController::class, 'kirim']);
 Route::get('/editPengarang/{id}', [PengarangController::class, 'edit']);
-Route::post('/update', [PengarangController::class, 'update']);
-Route::get('/delete/{id}', [PengarangController::class, 'delete']);
+Route::post('/updatePengarang', [PengarangController::class, 'update']);
+Route::get('/deletePengarang/{id}', [PengarangController::class, 'delete']);
 
 Route::get('/penerbit', [PenerbitController::class, 'penerbit']);
 Route::get('/tambahPenerbit', [PenerbitController::class, 'tambah']);
 Route::post('/kirimPenerbit', [PenerbitController::class, 'kirim']);
 Route::get('/editPenerbit/{id}', [PenerbitController::class, 'edit']);
-Route::post('/update', [PenerbitController::class, 'update']);
-Route::get('/delete/{id}', [PenerbitController::class, 'delete']);
+Route::post('/updatePenerbit', [PenerbitController::class, 'update']);
+Route::get('/deletePenerbit/{id}', [PenerbitController::class, 'delete']);

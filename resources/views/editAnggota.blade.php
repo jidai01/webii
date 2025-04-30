@@ -13,10 +13,12 @@
             </div>
         @endif
 
-        <form action="/updatePengarang" method="post">
+        <form action="/updateAnggota" method="post">
             @csrf
-            <input type="hidden" name="id_pengarang" value="{{ $pengarang->id_pengarang }}">
-            <input type="text" class="form-control mb-4" name="nama_pengarang" value="{{ $pengarang->nama_pengarang }}">
+            <input type="hidden" name="nim_lama" value="{{ $anggota->nim }}">
+            <input type="text" class="form-control mb-4" name="nim"value="{{ $anggota->nim }}">
+            <input type="text" class="form-control mb-4" name="nama" value="{{ $anggota->nama }}">
+            <textarea class="form-control mb-4" name="alamat" rows="5" cols="100">{{ $anggota->alamat }}</textarea>
 
             <button type="submit">Edit</button>
         </form>
