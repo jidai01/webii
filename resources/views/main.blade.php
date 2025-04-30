@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand text-white" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -21,58 +21,58 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                        <a class="nav-link active text-white" aria-current="page" href="/home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/biodata">Biodata</a>
+                        <a class="nav-link text-white" href="/biodata">Biodata</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/pinjam">Pinjam</a>
+                        <a class="nav-link text-white" href="/pinjam">Pinjam</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Semua Anggota
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item nav-link" href="/anggota">Anggota</a></li>
-                            <li><a class="dropdown-item nav-link" href="/tambahAnggota">Tambah Anggota</a></li>
+                            <li><a class="dropdown-item" href="/anggota">Anggota</a></li>
+                            <li><a class="dropdown-item" href="/tambahAnggota">Tambah Anggota</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Semua Buku
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item nav-link" href="/buku">Buku</a></li>
-                            <li><a class="dropdown-item nav-link" href="/tambahBuku">Tambah Buku</a></li>
+                            <li><a class="dropdown-item" href="/buku">Buku</a></li>
+                            <li><a class="dropdown-item" href="/tambahBuku">Tambah Buku</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Semua Pengarang
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item nav-link" href="/pengarang">Pengarang</a></li>
-                            <li><a class="dropdown-item nav-link" href="/tambahPengarang">Tambah Pengarang</a></li>
+                            <li><a class="dropdown-item" href="/pengarang">Pengarang</a></li>
+                            <li><a class="dropdown-item" href="/tambahPengarang">Tambah Pengarang</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Semua Penerbit
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item nav-link" href="/penerbit">Penerbit</a></li>
-                            <li><a class="dropdown-item nav-link" href="/tambahPenerbit">Tambah Penerbit</a></li>
+                            <li><a class="dropdown-item" href="/penerbit">Penerbit</a></li>
+                            <li><a class="dropdown-item" href="/tambahPenerbit">Tambah Penerbit</a></li>
                         </ul>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
             </div>
         </div>
