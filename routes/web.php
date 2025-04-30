@@ -20,12 +20,10 @@ Route::get('/pinjam', [PinjamController::class, 'pinjam']);
 
 Route::get('/anggota', [AnggotaController::class, 'anggota']);
 Route::get('/tambah', [AnggotaController::class, 'tambah']);
-Route::get('/kirim', [AnggotaController::class, 'kirim']);
 Route::post('/kirim', [AnggotaController::class, 'kirim']);
 
 Route::get('/buku', [BukuController::class, 'buku']);
 Route::get('/tambahBuku', [BukuController::class, 'tambah']);
-Route::get('/kirim', [BukuController::class, 'kirim']);
 Route::post('/kirim', [BukuController::class, 'kirim']);
 Route::get('/editBuku/{id}', [BukuController::class, 'edit']);
 Route::post('/update', [BukuController::class, 'update']);
