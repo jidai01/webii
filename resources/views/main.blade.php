@@ -45,6 +45,26 @@
                             <li><a class="dropdown-item nav-link" href="/tambahBuku">Tambah Buku</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Semua Pengarang
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item nav-link" href="/pengarang">Pengarang</a></li>
+                            <li><a class="dropdown-item nav-link" href="/tambahPengarang">Tambah Pengarang</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Semua Penerbit
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item nav-link" href="/penerbit">Penerbit</a></li>
+                            <li><a class="dropdown-item nav-link" href="/tambahPenerbit">Tambah Penerbit</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
