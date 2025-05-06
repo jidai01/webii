@@ -2,7 +2,7 @@
 @section('content')
     <h1>{{ $content }}</h1>
     <h2>Daftar Penerbit</h2>
-    <a href="/tambahPenerbit" class="btn btn-sm btn-success">Tambah Penerbit</a>
+    <a href="/tambahPenerbit" class="btn btn-sm btn-success m-2">Tambah Penerbit</a>
     <table class="table table-bordered">
         <thead>
             <tr>

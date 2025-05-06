@@ -18,11 +18,11 @@ class Buku extends Model
     public $timestamps = false;
     public function pengarang()
     {
-        return $this->belongsTo(Pengarang::class, 'id_pengarang');
+        return $this->belongsTo(Pengarang::class, 'id_pengarang', 'id_pengarang');
     }
 
     public function penerbit()
     {
-        return $this->belongsTo(Penerbit::class, 'id_penerbit');
+        return $this->belongsTo(Penerbit::class, 'id_penerbit', 'id_penerbit');
     }
 }

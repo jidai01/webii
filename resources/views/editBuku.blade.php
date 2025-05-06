@@ -23,8 +23,7 @@
             <select class="form-control mb-4" name="id_pengarang">
                 <option value="">-- Pilih Pengarang --</option>
                 @foreach ($pengaranglist as $pengarang)
-                    <option value="{{ $pengarang->id_pengarang }}"
-                        {{ old('id_pengarang', $buku->id_pengarang) == $pengarang->id_pengarang ? 'selected' : '' }}>
+                    <option value="{{ $pengarang->id_pengarang }}" @selected($pengarang->id_pengarang == $buku->id_pengarang)>
                         {{ $pengarang->nama_pengarang }}
                     </option>
                 @endforeach
@@ -33,8 +32,7 @@
             <select class="form-control mb-4" name="id_penerbit">
                 <option value="">-- Pilih Penerbit --</option>
                 @foreach ($penerbitlist as $penerbit)
-                    <option value="{{ $penerbit->id_penerbit }}"
-                        {{ old('id_penerbit', $buku->id_penerbit) == $penerbit->id_penerbit ? 'selected' : '' }}>
+                    <option value="{{ $penerbit->id_penerbit }}" @selected($penerbit->id_penerbit == $buku->id_penerbit)>
                         {{ $penerbit->nama_penerbit }}
                     </option>
                 @endforeach
