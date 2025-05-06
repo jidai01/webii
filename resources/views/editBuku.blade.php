@@ -43,7 +43,7 @@
 
             <textarea class="form-control mb-4" name="deskripsi" rows="5" placeholder="Deskripsi">{{ old('deskripsi', $buku->deskripsi) }}</textarea>
 
-            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+            <button type="submit" class="btn btn-primary">Edit</button>
         </form>
     </div>
 @endsection

@@ -24,7 +24,7 @@
                     <td>{{ $row->nama }}</td>
                     <td>{{ $row->alamat }}</td>
                     <td>
-                        <a href="/editAnggota/{{ $row->id_anggota }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deleteAnggota/{{ $row->id_anggota }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                        <a href="/editAnggota/{{ $row->nim }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deleteAnggota/{{ $row->nim }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>
                 </tr>
             @endforeach

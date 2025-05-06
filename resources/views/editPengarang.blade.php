@@ -18,7 +18,7 @@
             <input type="hidden" name="id_pengarang" value="{{ $pengarang->id_pengarang }}">
             <input type="text" class="form-control mb-4" name="nama_pengarang" value="{{ $pengarang->nama_pengarang }}">
 
-            <button type="submit">Edit</button>
+            <button type="submit" class="btn btn-primary">Edit</button>
         </form>
     </div>
 @endsection

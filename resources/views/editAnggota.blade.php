@@ -20,7 +20,7 @@
             <input type="text" class="form-control mb-4" name="nama" value="{{ $anggota->nama }}">
             <textarea class="form-control mb-4" name="alamat" rows="5" cols="100">{{ $anggota->alamat }}</textarea>
 
-            <button type="submit">Edit</button>
+            <button type="submit" class="btn btn-primary">Edit</button>
         </form>
     </div>
 @endsection
