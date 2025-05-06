@@ -2,6 +2,7 @@
 @section('content')
     <h1>{{ $content }}</h1>
     <h2>Daftar Anggota</h2>
+    <a href="/tambahAnggota" class="btn btn-sm btn-success">Tambah Anggota</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -22,7 +23,9 @@
                     <td>{{ $row->nim }}</td>
                     <td>{{ $row->nama }}</td>
                     <td>{{ $row->alamat }}</td>
-                    <td><a href="/editAnggota/{{ $row->nim }}">Edit</a> | <a href="/deleteAnggota/{{ $row->nim }}">Hapus</a></td>
+                    <td>
+                        <a href="/editAnggota/{{ $row->id_anggota }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deleteAnggota/{{ $row->id_anggota }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

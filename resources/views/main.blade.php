@@ -27,47 +27,19 @@
                         <a class="nav-link text-white" href="/biodata">Biodata</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-white" href="/anggota">Anggota</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/pengarang">Pengarang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/penerbit">Penerbit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/buku">Buku</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-white" href="/pinjam">Pinjam</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Semua Anggota
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/anggota">Anggota</a></li>
-                            <li><a class="dropdown-item" href="/tambahAnggota">Tambah Anggota</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Semua Buku
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/buku">Buku</a></li>
-                            <li><a class="dropdown-item" href="/tambahBuku">Tambah Buku</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Semua Pengarang
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/pengarang">Pengarang</a></li>
-                            <li><a class="dropdown-item" href="/tambahPengarang">Tambah Pengarang</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Semua Penerbit
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/penerbit">Penerbit</a></li>
-                            <li><a class="dropdown-item" href="/tambahPenerbit">Tambah Penerbit</a></li>
-                        </ul>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">

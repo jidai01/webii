@@ -2,6 +2,7 @@
 @section('content')
     <h1>{{ $content }}</h1>
     <h2>Daftar Pengarang</h2>
+    <a href="/tambahPengarang" class="btn btn-sm btn-success">Tambah Pengarang</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -18,7 +19,9 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $row->nama_pengarang }}</td>
-                    <td><a href="/editPengarang/{{ $row->id_pengarang }}">Edit</a> | <a href="/deletePengarang/{{ $row->id_pengarang }}">Hapus</a></td>
+                    <td>
+                        <a href="/editPengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deletePengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

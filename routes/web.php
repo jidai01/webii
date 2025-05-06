@@ -10,7 +10,7 @@ use App\Http\Controllers\PenerbitController;
 use App\Http\Controllers\PinjamController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [MainController::class, 'main']);
+Route::get('/', [MainController::class, 'home']);
 
 Route::get('/home', [HomeController::class, 'home']);
 

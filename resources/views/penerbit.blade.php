@@ -1,7 +1,8 @@
 @extends('main')
 @section('content')
     <h1>{{ $content }}</h1>
-    <h2>Daftar Buku</h2>
+    <h2>Daftar Penerbit</h2>
+    <a href="/tambahPenerbit" class="btn btn-sm btn-success">Tambah Penerbit</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -18,7 +19,9 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $row->nama_penerbit }}</td>
-                    <td><a href="/editPenerbit/{{ $row->id_penerbit }}">Edit</a> | <a href="/deletePenerbit/{{ $row->id_penerbit }}">Hapus</a></td>
+                    <td>
+                        <a href="/editPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deletePenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
