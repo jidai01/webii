@@ -3,7 +3,7 @@
     <h1>{{ $content }}</h1>
     <h2>Daftar Buku</h2>
     <table class="table table-bordered">
-        <thead>
+        <thead class="thead-dark">
             <tr>
                 <th>No</th>
                 <th>Judul</th>
@@ -11,24 +11,27 @@
                 <th>Penerbit</th>
                 <th>Tahun</th>
                 <th>Deskripsi</th>
-                <th>Action</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @php
-                $no = 1;
-            @endphp
-            @foreach ($buku as $row)
+            @forelse ($buku as $index => $row)
                 <tr>
-                    <td>{{ $no++ }}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $row->judul }}</td>
-                    <td>{{ $row->pengarang }}</td>
-                    <td>{{ $row->penerbit }}</td>
+                    <td>{{ $row->pengarang->nama_pengarang ?? '-' }}</td>
+                    <td>{{ $row->penerbit->nama_penerbit ?? '-' }}</td>
                     <td>{{ $row->tahun }}</td>
                     <td>{{ $row->deskripsi }}</td>
-                    <td><a href="/editBuku/{{ $row->id_buku }}">Edit</a> | <a href="/deleteBuku/{{ $row->id_buku }}">Hapus</a></td>
+                    <td>
+                        <a href="/editBuku/{{ $row->id_buku }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deleteBuku/{{ $row->id_buku }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                    </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="7" class="text-center">Tidak ada data buku.</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
 @endsection

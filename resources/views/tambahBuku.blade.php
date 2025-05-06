@@ -17,16 +17,16 @@
         <form action="/kirimBuku" method="post">
             @csrf
             <input type="text" class="form-control mb-4" name="judul" placeholder="Judul">
-            <select class="form-control mb-4" name="pengarang">
+            <select class="form-control mb-4" name="id_pengarang">
                 <option value="">-- Pilih Pengarang --</option>
                 @foreach ($pengaranglist as $pengarang)
-                    <option value="{{ $pengarang }}">{{ $pengarang }}</option>
+                    <option value="{{ $pengarang->id_pengarang }}">{{ $pengarang->nama_pengarang }}</option>
                 @endforeach
             </select>
-            <select class="form-control mb-4" name="penerbit">
+            <select class="form-control mb-4" name="id_penerbit">
                 <option value="">-- Pilih Penerbit --</option>
                 @foreach ($penerbitlist as $penerbit)
-                    <option value="{{ $penerbit }}">{{ $penerbit }}</option>
+                    <option value="{{ $penerbit->id_penerbit }}">{{ $penerbit->nama_penerbit }}</option>
                 @endforeach
             </select>
             <input type="text" class="form-control mb-4" name="tahun" placeholder="Tahun Terbit">

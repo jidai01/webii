@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Buku;
+use App\Models\Pengarang;
+use App\Models\Penerbit;
 use Illuminate\Http\RedirectResponse;
 
 class BukuController extends Controller
@@ -20,21 +22,8 @@ class BukuController extends Controller
     {
         $title = "Tambah Buku";
         $content = "Ini halaman Tambah Buku dari controller";
-
-        $pengaranglist = [
-            'Aldwin',
-            'Ari',
-            'Angel',
-            'Desti',
-            'Via'
-        ];
-
-        $penerbitlist = [
-            'Gramedia',
-            'Erlangga',
-            'Mizan'
-        ];
-
+        $pengaranglist = Pengarang::all();
+        $penerbitlist = Penerbit::all();
         return view('tambahBuku', compact('title', 'content', 'pengaranglist', 'penerbitlist'));
     }
 
@@ -42,8 +31,8 @@ class BukuController extends Controller
     {
         $validasi = $request->validate([
             'judul' => 'required|unique:buku,judul',
-            'pengarang' => 'required',
-            'penerbit' => 'required',
+            'id_pengarang' => 'required',
+            'id_penerbit' => 'required',
             'tahun' => 'required|integer',
             'deskripsi' => 'required'
         ]);
@@ -59,8 +48,8 @@ class BukuController extends Controller
 
         $validasi = $request->validate([
             'judul' => 'required|unique:buku,judul,' . $id_buku . ',id_buku',
-            'pengarang' => 'required',
-            'penerbit' => 'required',
+            'id_pengarang' => 'required',
+            'id_penerbit' => 'required',
             'tahun' => 'required|integer',
             'deskripsi' => 'required'
         ]);
@@ -76,19 +65,8 @@ class BukuController extends Controller
         $content = "Ini halaman Edit Buku dari controller";
         $buku = Buku::find($id);
 
-        $pengaranglist = [
-            'Aldwin',
-            'Ari',
-            'Angel',
-            'Desti',
-            'Via'
-        ];
-
-        $penerbitlist = [
-            'Gramedia',
-            'Erlangga',
-            'Mizan'
-        ];
+        $pengaranglist = Pengarang::all();
+        $penerbitlist = Penerbit::all();
 
         return view('editBuku', compact('title', 'content', 'buku', 'pengaranglist', 'penerbitlist'));
     }

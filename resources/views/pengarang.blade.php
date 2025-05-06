@@ -1,7 +1,7 @@
 @extends('main')
 @section('content')
     <h1>{{ $content }}</h1>
-    <h2>Daftar Buku</h2>
+    <h2>Daftar Pengarang</h2>
     <table class="table table-bordered">
         <thead>
             <tr>

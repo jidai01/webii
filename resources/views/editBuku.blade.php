@@ -16,21 +16,36 @@
         <form action="/updateBuku" method="post">
             @csrf
             <input type="hidden" name="id_buku" value="{{ $buku->id_buku }}">
-            <input type="text" class="form-control mb-4" name="judul" placeholder="Judul" value="{{ $buku->judul }}">
-            <select class="form-control mb-4" name="pengarang">
-                @foreach ($pengaranglist as $pengarang)
-                    <option value="{{ $pengarang }}" @selected($pengarang == $buku->pengarang)>{{ $pengarang }}</option>
-                @endforeach
-            </select>
-            <select class="form-control mb-4" name="penerbit">
-                @foreach ($penerbitlist as $penerbit)
-                    <option value="{{ $penerbit }}" @selected($penerbit == $buku->penerbit)>{{ $penerbit }}</option>
-                @endforeach
-            </select>
-            <input type="text" class="form-control mb-4" name="tahun" placeholder="Tahun Terbit" value="{{ $buku->tahun }}">
-            <textarea class="form-control mb-4" name="deskripsi" rows="5" cols="100" placeholder="Deskripsi">{{ $buku->deskripsi }}</textarea>
 
-            <button type="submit">Edit</button>
+            <input type="text" class="form-control mb-4" name="judul" placeholder="Judul"
+                value="{{ old('judul', $buku->judul) }}">
+
+            <select class="form-control mb-4" name="id_pengarang">
+                <option value="">-- Pilih Pengarang --</option>
+                @foreach ($pengaranglist as $pengarang)
+                    <option value="{{ $pengarang->id_pengarang }}"
+                        {{ old('id_pengarang', $buku->id_pengarang) == $pengarang->id_pengarang ? 'selected' : '' }}>
+                        {{ $pengarang->nama_pengarang }}
+                    </option>
+                @endforeach
+            </select>
+
+            <select class="form-control mb-4" name="id_penerbit">
+                <option value="">-- Pilih Penerbit --</option>
+                @foreach ($penerbitlist as $penerbit)
+                    <option value="{{ $penerbit->id_penerbit }}"
+                        {{ old('id_penerbit', $buku->id_penerbit) == $penerbit->id_penerbit ? 'selected' : '' }}>
+                        {{ $penerbit->nama_penerbit }}
+                    </option>
+                @endforeach
+            </select>
+
+            <input type="text" class="form-control mb-4" name="tahun" placeholder="Tahun Terbit"
+                value="{{ old('tahun', $buku->tahun) }}">
+
+            <textarea class="form-control mb-4" name="deskripsi" rows="5" placeholder="Deskripsi">{{ old('deskripsi', $buku->deskripsi) }}</textarea>
+
+            <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
         </form>
     </div>
 @endsection
