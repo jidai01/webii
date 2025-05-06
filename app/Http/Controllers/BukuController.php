@@ -76,4 +76,12 @@ class BukuController extends Controller
         Buku::where('id_buku', $id)->delete();
         return redirect('/buku');
     }
+
+    public function byPenerbit($id) {
+        $title = "Buku Penerbit";
+        $content = "Ini halaman Buku Penerbit dari controller";
+        $penerbit = Penerbit::find($id);
+
+        return view('bukuPenerbit', compact('title', 'content', 'penerbit'));
+    }
 }

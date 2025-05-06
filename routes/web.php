@@ -45,3 +45,5 @@ Route::post('/kirimPenerbit', [PenerbitController::class, 'kirim']);
 Route::get('/editPenerbit/{id}', [PenerbitController::class, 'edit']);
 Route::post('/updatePenerbit', [PenerbitController::class, 'update']);
 Route::get('/deletePenerbit/{id}', [PenerbitController::class, 'delete']);
+
+Route::get('/bukuPenerbit/{id}', [BukuController::class, 'byPenerbit']);

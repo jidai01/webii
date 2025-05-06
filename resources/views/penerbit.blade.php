@@ -20,7 +20,10 @@
                     <td>{{ $no++ }}</td>
                     <td>{{ $row->nama_penerbit }}</td>
                     <td>
-                        <a href="/editPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deletePenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                        <a href="/bukuPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-secondary">Lihat</a> |
+                        <a href="/editPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-warning">Edit</a> |
+                        <a href="/deletePenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-danger"
+                            onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>
                 </tr>
             @endforeach
