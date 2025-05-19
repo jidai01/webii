@@ -36,6 +36,8 @@ class BukuController extends Controller
             'tahun' => 'required|integer',
             'deskripsi' => 'required'
         ]);
+        $path = $request->file('cover')->storePublicly('buku', 'public');
+        $validasi['cover'] = $path;
 
         Buku::insert($validasi);
 

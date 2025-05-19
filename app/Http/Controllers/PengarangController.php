@@ -28,6 +28,8 @@ class PengarangController extends Controller
         $validasi = $request->validate([
             'nama_pengarang' => 'required',
         ]);
+        $path = $request->file('cover')->storePublicly('pengarang', 'public');
+        $validasi['cover'] = $path;
 
         Pengarang::insert($validasi);
 

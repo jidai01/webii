@@ -8,6 +8,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama Pengarang</th>
+                <th>Cover</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -19,6 +20,9 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $row->nama_pengarang }}</td>
+                    <td>
+                        <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverPengarang">
+                    </td>
                     <td>
                         <a href="/editPengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deletePengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>

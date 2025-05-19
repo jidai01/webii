@@ -12,6 +12,7 @@
                 <th>Penerbit</th>
                 <th>Tahun</th>
                 <th>Deskripsi</th>
+                <th>Cover</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -24,6 +25,9 @@
                     <td>{{ $row->penerbit->nama_penerbit ?? '-' }}</td>
                     <td>{{ $row->tahun }}</td>
                     <td>{{ $row->deskripsi }}</td>
+                    <td>
+                        <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverBuku">
+                    </td>
                     <td>
                         <a href="/editBuku/{{ $row->id_buku }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deleteBuku/{{ $row->id_buku }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>

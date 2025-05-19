@@ -10,6 +10,7 @@
                 <th>Pengarang</th>
                 <th>Tahun</th>
                 <th>Deskripsi</th>
+                <th>Cover</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,9 @@
                     <td>{{ $row->pengarang->nama_pengarang ?? '-' }}</td>
                     <td>{{ $row->tahun }}</td>
                     <td>{{ $row->deskripsi }}</td>
+                    <td>
+                        <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverBuku">
+                    </td>
                 </tr>
             @empty
                 <tr>

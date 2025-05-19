@@ -14,9 +14,10 @@
         @endif
 
         <h1>POST</h1>
-        <form action="/kirimPenerbit" method="post">
+        <form action="/kirimPenerbit" method="post" enctype="multipart/form-data">
             @csrf
             <input type="text" class="form-control mb-4" name="nama_penerbit" placeholder="Nama Penerbit">
+            <input type="file" class="form-control mb-4" name="cover" placeholder="Cover">
             <button type="submit">Tambah</button>
         </form>
     </div>

@@ -14,7 +14,7 @@
         @endif
 
         <h1>POST</h1>
-        <form action="/kirimBuku" method="post">
+        <form action="/kirimBuku" method="post" enctype="multipart/form-data">
             @csrf
             <input type="text" class="form-control mb-4" name="judul" placeholder="Judul">
             <select class="form-control mb-4" name="id_pengarang">
@@ -31,6 +31,7 @@
             </select>
             <input type="text" class="form-control mb-4" name="tahun" placeholder="Tahun Terbit">
             <textarea class="form-control mb-4" name="deskripsi" rows="5" cols="100" placeholder="Deskripsi"></textarea>
+            <input type="file" class="form-control mb-4" name="cover" placeholder="Cover">
 
             <button type="submit">Tambah</button>
         </form>

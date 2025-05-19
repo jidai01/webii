@@ -8,6 +8,7 @@
             <tr>
                 <th>No</th>
                 <th>Nama Penerbit</th>
+                <th>Cover</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -19,6 +20,9 @@
                 <tr>
                     <td>{{ $no++ }}</td>
                     <td>{{ $row->nama_penerbit }}</td>
+                    <td>
+                        <img class="img-thmbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverPenerbit">
+                    </td>
                     <td>
                         <a href="/bukuPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-secondary">Lihat</a> |
                         <a href="/editPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-warning">Edit</a> |

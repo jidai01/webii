@@ -28,6 +28,8 @@ class PenerbitController extends Controller
         $validasi = $request->validate([
             'nama_penerbit' => 'required'
         ]);
+        $path = $request->file('cover')->storePublicly('penerbit', 'public');
+        $validasi['cover'] = $path;
 
         Penerbit::insert($validasi);
 
