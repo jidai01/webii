@@ -10,24 +10,30 @@
                 <th>NIM</th>
                 <th>Nama</th>
                 <th>Alamat</th>
+                <th>Cover</th>
                 <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            @php
-                $no = 1;
-            @endphp
-            @foreach ($anggota as $row)
+            @forelse ($anggota as $index => $row)
                 <tr>
-                    <td>{{ $no++ }}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $row->nim }}</td>
                     <td>{{ $row->nama }}</td>
                     <td>{{ $row->alamat }}</td>
                     <td>
-                        <a href="/editAnggota/{{ $row->nim }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deleteAnggota/{{ $row->nim }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                        <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverAnggota">
+                    </td>
+                    <td>
+                        <a href="/editAnggota/{{ $row->nim }}" class="btn btn-sm btn-warning">Edit</a> | 
+                        <a href="/deleteAnggota/{{ $row->nim }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="7" class="text-center">Tidak ada data anggota.</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
 @endsection

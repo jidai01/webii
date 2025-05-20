@@ -13,24 +13,24 @@
             </tr>
         </thead>
         <tbody>
-            @php
-                $no = 1;
-            @endphp
-            @foreach ($penerbit as $row)
+            @forelse ($penerbit as $index => $row)
                 <tr>
-                    <td>{{ $no++ }}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $row->nama_penerbit }}</td>
                     <td>
-                        <img class="img-thmbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverPenerbit">
+                        <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverPenerbit">
                     </td>
                     <td>
-                        <a href="/bukuPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-secondary">Lihat</a> |
-                        <a href="/editPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-warning">Edit</a> |
-                        <a href="/deletePenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-danger"
-                            onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                        <a href="/bukuPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-secondary">Lihat</a> | 
+                        <a href="/editPenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-warning">Edit</a> | 
+                        <a href="/deletePenerbit/{{ $row->id_penerbit }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="7" class="text-center">Tidak ada data penerbit.</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
 @endsection

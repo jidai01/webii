@@ -13,21 +13,23 @@
             </tr>
         </thead>
         <tbody>
-            @php
-                $no = 1;
-            @endphp
-            @foreach ($pengarang as $row)
+            @forelse ($pengarang as $index => $row)
                 <tr>
-                    <td>{{ $no++ }}</td>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $row->nama_pengarang }}</td>
                     <td>
                         <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverPengarang">
                     </td>
                     <td>
-                        <a href="/editPengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deletePengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                        <a href="/editPengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-warning">Edit</a> | 
+                        <a href="/deletePengarang/{{ $row->id_pengarang }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <tr>
+                    <td colspan="7" class="text-center">Tidak ada data pengarang.</td>
+                </tr>
+            @endforelse
         </tbody>
     </table>
 @endsection

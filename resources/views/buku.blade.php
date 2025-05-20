@@ -29,7 +29,8 @@
                         <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverBuku">
                     </td>
                     <td>
-                        <a href="/editBuku/{{ $row->id_buku }}" class="btn btn-sm btn-warning">Edit</a> | <a href="/deleteBuku/{{ $row->id_buku }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+                        <a href="/editBuku/{{ $row->id_buku }}" class="btn btn-sm btn-warning">Edit</a> | 
+                        <a href="/deleteBuku/{{ $row->id_buku }}" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
                     </td>
                 </tr>
             @empty
