@@ -5,12 +5,18 @@ use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengarangController;
 use App\Http\Controllers\PenerbitController;
 use App\Http\Controllers\PinjamController;
+use App\Http\Middleware\CekLogin;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'home']);
+Route::get('/', [MainController::class, 'main']);
+
+Route::get('/login', [LoginController::class, 'login']);
+
+Route::post('/autentikasi', [LoginController::class, 'authenticate']);
 
 Route::get('/home', [HomeController::class, 'home']);
 
@@ -25,7 +31,7 @@ Route::get('/editAnggota/{id}', [AnggotaController::class, 'edit']);
 Route::post('/updateAnggota', [AnggotaController::class, 'update']);
 Route::get('/deleteAnggota/{id}', [AnggotaController::class, 'delete']);
 
-Route::get('/buku', [BukuController::class, 'buku']);
+Route::get('/buku', [BukuController::class, 'buku'])->middleware(CekLogin::class);
 Route::get('/tambahBuku', [BukuController::class, 'tambah']);
 Route::post('/kirimBuku', [BukuController::class, 'kirim']);
 Route::get('/editBuku/{id}', [BukuController::class, 'edit']);

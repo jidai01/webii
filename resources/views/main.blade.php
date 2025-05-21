@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">Navbar</a>
+            <a class="navbar-brand text-white" href="/home">Navbar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -40,6 +40,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/pinjam">Pinjam</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/login">Login</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
