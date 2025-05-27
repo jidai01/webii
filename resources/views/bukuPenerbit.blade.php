@@ -2,6 +2,13 @@
 @section('content')
     <h1>{{ $content }}</h1>
     <h2>Oleh Penerbit: {{ $penerbit->nama_penerbit }}</h2>
+    <div class="m-2">
+        <form action="/cetak-bukupenerbit" method="post">
+            @csrf
+            <input type="hidden" name="id_penerbit" value="{{ $penerbit->id_penerbit }}">
+            <button type="submit" class="btn btn-warning">Cetak PDF</button>
+        </form>
+    </div>
     <table class="table table-bordered">
         <thead class="thead-dark">
             <tr>
@@ -22,7 +29,7 @@
                     <td>{{ $row->tahun }}</td>
                     <td>{{ $row->deskripsi }}</td>
                     <td>
-                        <img class="img-thumbnail" width="50" src="{{ asset('storage/'.$row->cover) }}" alt="coverBuku">
+                        <img class="img-thumbnail" width="50" src="{{ asset('storage/' . $row->cover) }}" alt="coverBuku">
                     </td>
                 </tr>
             @empty

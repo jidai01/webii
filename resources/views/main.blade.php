@@ -41,9 +41,21 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" href="/pinjam">Pinjam</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="/login">Login</a>
-                    </li>
+                    @if (!Auth::check())
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/register">Register</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <form action="{{ route('logout') }}" method="POST" class="d-flex align-items-center">
+                                @csrf
+                                <button type="submit" class="btn btn-outline-danger text-light my-1">Logout</button>
+                            </form>
+                        </li>
+                    @endif
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengarangController;
 use App\Http\Controllers\PenerbitController;
 use App\Http\Controllers\PinjamController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Middleware\CekLogin;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,11 @@ Route::get('/', [MainController::class, 'main']);
 Route::get('/login', [LoginController::class, 'login']);
 
 Route::post('/autentikasi', [LoginController::class, 'authenticate']);
+
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/register', [RegisterController::class, 'showRegisterForm']);
+Route::post('/registrasi', [RegisterController::class, 'register']);
 
 Route::get('/home', [HomeController::class, 'home']);
 
@@ -53,3 +59,5 @@ Route::post('/updatePenerbit', [PenerbitController::class, 'update']);
 Route::get('/deletePenerbit/{id}', [PenerbitController::class, 'delete']);
 
 Route::get('/bukuPenerbit/{id}', [BukuController::class, 'byPenerbit']);
+
+Route::post('/cetak-bukupenerbit', [BukuController::class, 'cetakBukuPenerbit']);

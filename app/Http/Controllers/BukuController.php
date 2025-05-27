@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Buku;
 use App\Models\Pengarang;
 use App\Models\Penerbit;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\RedirectResponse;
 
 class BukuController extends Controller
@@ -85,5 +86,12 @@ class BukuController extends Controller
         $penerbit = Penerbit::find($id);
 
         return view('bukuPenerbit', compact('title', 'content', 'penerbit'));
+    }
+
+    function cetakBukuPenerbit(Request $request) {
+        $id_penerbit = $request->id_penerbit;
+        $buku = Buku::where('id_penerbit', $id_penerbit)->get();
+        $pdf = Pdf::loadview('bukupenerbitpdf', compact('buku'));
+        return $pdf->download();
     }
 }
